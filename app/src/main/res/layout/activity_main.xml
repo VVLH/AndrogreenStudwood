@@ -7,12 +7,13 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/BoutonPays"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="35dp"
         android:background="#8BC34A"
-        android:text="Button"
+        android:backgroundTint="#8BC34A"
+        android:text="Villes"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/button5"
         app:layout_constraintStart_toEndOf="@+id/BoutonQCM"
@@ -26,7 +27,7 @@
         android:layout_marginStart="35dp"
         android:layout_marginBottom="35dp"
         android:background="#8BC34A"
-        android:text="Button"
+        android:text="QCM"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -41,7 +42,7 @@
         android:layout_marginEnd="35dp"
         android:layout_marginBottom="35dp"
         android:background="#8BC34A"
-        android:text="Button"
+        android:text="A Propos"
         android:textColorLink="#8BC34A"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -63,13 +64,20 @@
         app:layout_constraintVertical_bias="0.32" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/desc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="35dp"
+        android:width="350dp"
+        android:gravity="center"
+        android:text="Bienvenue sur l'application qui permet d'indiquer votre emission de poluttion "
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Titre" />
+        app:layout_constraintTop_toBottomOf="@+id/Titre"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
