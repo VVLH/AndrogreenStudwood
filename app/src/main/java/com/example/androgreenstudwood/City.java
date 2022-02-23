@@ -3,30 +3,77 @@ package com.example.androgreenstudwood;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class City extends AppCompatActivity {
-    Button bouton;
+
+    private Context context;
+    private String[] villes = {"Toulouse", "Paris", "Lyon"};
+    private static LayoutInflater inflater = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_city);
-        bouton = (Button) findViewById(R.id.retourCity);
+
+        Button bouton = (Button) findViewById(R.id.retourCity);
         bouton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 finish();
             }
         });
+
     }
+
+    public void AdapterPerso(Context context, String[] villes){
+
+        this.context =context;
+        this.villes = villes;
+
+        this.inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+    }
+
+    public int getCount(){
+        return this.villes.length;
+    }
+
+    public Object getItem(int position){
+        return this.villes[position];
+    }
+
+    public long getItemId(int position){
+        return position;
+    }
+
+    public View getView(int position, View convertView, ViewGroup parent) {
+        View previous = convertView;
+        View retour = previous;
+
+        if (retour == null) {
+            retour = inflater.inflate(R.layout.listitemlayout, null);
+        }
+        TextView text = (TextView) retour.findViewById(R.id.textView2);
+        text.setText(this.villes[position]);
+
+        return retour;
+    }
+
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
