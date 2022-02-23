@@ -5,6 +5,6 @@
     <string name="ville">Ville</string>
     <string name="home">Menu</string>
     <string name="texte">Bienvenue sur l\'application qui permet d\'indiquer votre emission de poluttion</string>
-
+    <string name="retour">Retour</string>
 
 </resources>
