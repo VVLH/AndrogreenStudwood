@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Androgreen Studwood</string>
+    <string name="apropos">A Propos</string>
+    <string name="qcm">QCM</string>
+    <string name="ville">Ville</string>
+    <string name="home">Menu</string>
+    <string name="texte">Bienvenue sur l\'application qui permet d\'indiquer votre emission de poluttion</string>
+
+
 </resources>

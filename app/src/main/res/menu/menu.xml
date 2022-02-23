@@ -4,14 +4,15 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/home"
-        android:title="home"
-        app:showAsAction="always"
-        />
+        android:title="@string/home"
+        app:showAsAction="always" />
     <item
         android:id="@+id/ville"
-        android:title="Ville" />
+        android:title="@string/ville" />
     <item
         android:id="@+id/qcm"
-        android:title="QCM" />
-    <item android:title="A propos" />
+        android:title="@string/qcm" />
+    <item
+        android:id="@+id/apropos"
+        android:title="@string/apropos" />
 </menu>
