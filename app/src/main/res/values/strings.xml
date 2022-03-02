@@ -6,5 +6,14 @@
     <string name="home">Menu</string>
     <string name="texte">Bienvenue sur l\'application qui permet d\'indiquer votre emission de poluttion</string>
     <string name="retour">Retour</string>
+    <string name="nom">Nom</string>
+    <string name="prenom">Prenom</string>
+    <string name="transport">Transport en commun</string>
+    <string name="voiture">Voiture</string>
+    <string name="pied">Velo/Pied</string>
+    <string name="quelleTransport">Quelle transport utilisez-vous pour aller au travail ?</string>
+    <string name="consommation">Combien de km parcourez-vous en voiture pour allez a votre travail par jour   ?</string>
+    <string name="litre">Combien de litre de carburant possède votre voiture ?</string>
+    <string name="valider">Valider</string>
 
 </resources>

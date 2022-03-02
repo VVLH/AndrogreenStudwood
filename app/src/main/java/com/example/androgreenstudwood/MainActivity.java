@@ -3,7 +3,9 @@ package com.example.androgreenstudwood;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.ContentValues;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.os.Bundle;
@@ -23,6 +25,19 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //DATABASE
+        ClientDbHelper bdd= new ClientDbHelper(this);
+        SQLiteDatabase db= bdd.getWritableDatabase();
+        ContentValues values =new ContentValues();
+        values.put("id",25);
+        values.put("nom","Paris");
+
+        db.insert("Ville",null, values);
+
+
+
+
 
         boutonQCM = (Button) findViewById(R.id.boutonQCM);
 

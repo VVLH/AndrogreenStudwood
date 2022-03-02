@@ -63,11 +63,6 @@ public class City extends AppCompatActivity {
         View previous = convertView;
         View retour = previous;
 
-        if (retour == null) {
-            retour = inflater.inflate(R.layout.listitemlayout, null);
-        }
-        TextView text = (TextView) retour.findViewById(R.id.textView2);
-        text.setText(this.villes[position]);
 
         return retour;
     }
