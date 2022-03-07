@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="TextView1" type="id" />
+    <item name="TextView2" type="id" />
+    <item name="lvVille" type="id" />
+</resources>

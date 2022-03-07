@@ -20,52 +20,23 @@ import android.widget.Toast;
 
 public class City extends AppCompatActivity {
 
-    private Context context;
-    private String[] villes = {"Toulouse", "Paris", "Lyon"};
-    private static LayoutInflater inflater = null;
+    ListView lvVille;
+    String[] villes = {"Toulouse", "Paris", "Lyon"};
+    int[] villeImages = {R.drawable.ville,R.drawable.villemoyenne, R.drawable.petiteville};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_city);
 
-        Button bouton = (Button) findViewById(R.id.retourCity);
-        bouton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                finish();
-            }
-        });
+        lvVille = (ListView) findViewById(R.id.listview);
+        VilleAdapter villeAdapter = new VilleAdapter(getApplicationContext(), villes, villeImages);
+        lvVille.setAdapter(villeAdapter);
+
 
     }
 
-    public void AdapterPerso(Context context, String[] villes){
 
-        this.context =context;
-        this.villes = villes;
-
-        this.inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-    }
-
-    public int getCount(){
-        return this.villes.length;
-    }
-
-    public Object getItem(int position){
-        return this.villes[position];
-    }
-
-    public long getItemId(int position){
-        return position;
-    }
-
-    public View getView(int position, View convertView, ViewGroup parent) {
-        View previous = convertView;
-        View retour = previous;
-
-
-        return retour;
-    }
 
 
 
