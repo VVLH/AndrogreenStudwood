@@ -96,8 +96,8 @@
 
     <TextView
         android:id="@+id/conso"
-        android:layout_width="406dp"
-        android:layout_height="34dp"
+        android:layout_width="369dp"
+        android:layout_height="18dp"
         android:layout_marginStart="5dp"
         android:layout_marginBottom="5dp"
         android:text="@string/consommation"
@@ -113,7 +113,7 @@
         android:id="@+id/litrelayout"
         android:layout_width="409dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="45dp"
         android:visibility="invisible"
         app:layout_constraintBottom_toTopOf="@+id/retourQCM"
         app:layout_constraintEnd_toEndOf="parent"
@@ -124,13 +124,14 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/litre"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:inputType="number" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
         android:id="@+id/questionlitre"
-        android:layout_width="345dp"
-        android:layout_height="24dp"
+        android:layout_width="367dp"
+        android:layout_height="34dp"
         android:layout_marginStart="5dp"
         android:layout_marginBottom="5dp"
         android:text="@string/litre"
@@ -146,7 +147,7 @@
         android:id="@+id/consolayout"
         android:layout_width="409dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="45dp"
+        android:layout_marginTop="35dp"
         android:visibility="invisible"
         app:layout_constraintBottom_toTopOf="@+id/retourQCM"
         app:layout_constraintEnd_toEndOf="parent"
@@ -155,7 +156,7 @@
         app:layout_constraintVertical_bias="0.0">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/questionsonso"
+            android:id="@+id/questionconso"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:inputType="number" />

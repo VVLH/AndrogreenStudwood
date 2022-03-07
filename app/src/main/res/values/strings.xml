@@ -12,8 +12,9 @@
     <string name="voiture">Voiture</string>
     <string name="pied">Velo/Pied</string>
     <string name="quelleTransport">Quelle transport utilisez-vous pour aller au travail ?</string>
-    <string name="consommation">Combien de km parcourez-vous en voiture pour allez a votre travail par jour   ?</string>
-    <string name="litre">Combien de litre de carburant possède votre voiture ?</string>
+    <string name="consommation">Quelle est votre distance parcouru entre 2 points ?</string>
+    <string name="litre">Combien de litre de carburant à besoin votre voiture pour faire le plein ?</string>
     <string name="valider">Valider</string>
+    <string name="consoSup">Votre consommation est de : </string>
 
 </resources>

@@ -1,28 +1,28 @@
 package com.example.androgreenstudwood;
 
-import static android.content.ContentValues.TAG;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
+import android.os.Parcelable;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 
-import java.text.BreakIterator;
+import org.w3c.dom.Text;
+
+import java.io.Serializable;
 
 public class QCM extends AppCompatActivity {
     Button bouton;
@@ -42,6 +42,16 @@ public class QCM extends AppCompatActivity {
         boutonV.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Intent intent = new Intent(QCM.this, totalConso.class);
+                EditText conso = (EditText) findViewById(R.id.questionconso);
+                EditText  litre = (EditText) findViewById(R.id.litre);
+                EditText nom = (EditText) findViewById(R.id.nom);
+                int nombreLitre =Integer.parseInt(litre.getText().toString());
+                int nombreConso =Integer.parseInt(conso.getText().toString());
+                int resultat = (nombreLitre*100)/nombreConso;
+                intent.putExtra("conso", resultat);
+
+                startActivity(intent);
 
             }
         });
