@@ -12,8 +12,10 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -21,8 +23,17 @@ import android.widget.Toast;
 public class City extends AppCompatActivity {
 
     ListView lvVille;
-    String[] villes = {"Toulouse", "Paris", "Lyon"};
-    int[] villeImages = {R.drawable.ville,R.drawable.villemoyenne, R.drawable.petiteville};
+    String[] villes = {"Paris", "Toulouse", "Clermont-Ferrand", "Marseille", "Nice",
+            "Pau", "Narbonne", "Poitier", "Valence", "Montauban",
+            "Hossegor", "Gruissan", "Saint-Tropez", "Mimizan", "Capbreton",
+            "Angers", "Nantes", "Strasbourg", "Lyon", "Caen"};
+    int[] villeImages = {R.drawable.ville, R.drawable.ville, R.drawable.ville, R.drawable.ville, R.drawable.ville,
+                        R.drawable.villemoyenne, R.drawable.villemoyenne, R.drawable.villemoyenne, R.drawable.villemoyenne, R.drawable.villemoyenne,
+                        R.drawable.petiteville, R.drawable.petiteville, R.drawable.petiteville, R.drawable.petiteville, R.drawable.petiteville,
+                        R.drawable.villeverte, R.drawable.villeverte, R.drawable.villeverte, R.drawable.villeverte, R.drawable.villeverte};
+
+    public static final String MSG = "";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,11 +44,16 @@ public class City extends AppCompatActivity {
         VilleAdapter villeAdapter = new VilleAdapter(getApplicationContext(), villes, villeImages);
         lvVille.setAdapter(villeAdapter);
 
+        lvVille.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            Intent intent = new Intent(City.this, Villes.class);
+            intent.putExtra(City.MSG, villes[position]);
+            startActivity(intent);
+            }
+        });
 
     }
-
-
-
 
 
 
