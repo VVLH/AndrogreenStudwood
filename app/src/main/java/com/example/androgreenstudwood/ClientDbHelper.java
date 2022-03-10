@@ -30,3 +30,4 @@ public class ClientDbHelper extends SQLiteOpenHelper {
         onUpgrade(db,oldVersion,newVersion);
     }
 }
+

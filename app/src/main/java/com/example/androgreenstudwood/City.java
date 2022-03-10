@@ -23,10 +23,9 @@ import android.widget.Toast;
 public class City extends AppCompatActivity {
 
     ListView lvVille;
-    String[] villes = {"Paris", "Toulouse", "Clermont-Ferrand", "Marseille", "Nice",
-            "Pau", "Narbonne", "Poitier", "Valence", "Montauban",
-            "Hossegor", "Gruissan", "Saint-Tropez", "Mimizan", "Capbreton",
-            "Angers", "Nantes", "Strasbourg", "Lyon", "Caen"};
+    String[] villes = {"Centre-Val de Loire", "Grand Est", "Pays de la Loire", "Bourgogne-Franche-Comté", "Bretagne",
+                    "Auvergne-Rhône-Alpes", "Hauts-de-France", "Occitanie", "Nouvelle-Aquitaine", "Île-de-France",
+                    "Normandie", "Corse", "Provence-Alpes-Côte d'Azur"};
     int[] villeImages = {R.drawable.ville, R.drawable.ville, R.drawable.ville, R.drawable.ville, R.drawable.ville,
                         R.drawable.villemoyenne, R.drawable.villemoyenne, R.drawable.villemoyenne, R.drawable.villemoyenne, R.drawable.villemoyenne,
                         R.drawable.petiteville, R.drawable.petiteville, R.drawable.petiteville, R.drawable.petiteville, R.drawable.petiteville,

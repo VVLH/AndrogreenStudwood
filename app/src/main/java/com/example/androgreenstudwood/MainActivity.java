@@ -36,9 +36,6 @@ public class MainActivity extends AppCompatActivity {
         db.insert("Ville",null, values);
 
 
-
-
-
         boutonQCM = (Button) findViewById(R.id.boutonQCM);
 
         boutonQCM.setOnClickListener(new View.OnClickListener() {

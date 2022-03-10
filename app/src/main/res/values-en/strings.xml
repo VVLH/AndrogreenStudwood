@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Androgreen Studwood</string>
+    <string name="apropos">A Propos</string>
+    <string name="qcm">QCM</string>
+    <string name="ville">Ville</string>
+    <string name="home">Menu</string>
+    <string name="texte">Bienvenue sur l\'application qui permet d\'indiquer votre emission de poluttion</string>
+    <string name="retour">Retour</string>
+    <string name="nom">Nom</string>
+    <string name="prenom">Prenom</string>
+    <string name="transport">Transport en commun</string>
+    <string name="voiture">Voiture</string>
+    <string name="pied">Velo/Pied</string>
+    <string name="quelleTransport">Quelle transport utilisez-vous pour aller au travail ?</string>
+    <string name="consommation">Quelle est votre distance parcouru entre 2 points ?</string>
+    <string name="litre">Combien de litre de carburant à besoin votre voiture pour faire le plein ?</string>
+    <string name="valider">Valider</string>
+    <string name="consoSup">Votre consommation est de : </string>
+
+</resources>
