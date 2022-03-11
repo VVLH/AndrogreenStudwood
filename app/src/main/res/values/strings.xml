@@ -2,9 +2,9 @@
     <string name="app_name">Androgreen Studwood</string>
     <string name="apropos">A Propos</string>
     <string name="qcm">QCM</string>
-    <string name="ville">Ville</string>
+    <string name="ville">Region</string>
     <string name="home">Menu</string>
-    <string name="texte">Bienvenue sur l\'application qui permet d\'indiquer votre emission de poluttion</string>
+    <string name="texte">Bienvenue sur l\'application qui permet d\'indiquer votre emission de polution</string>
     <string name="retour">Retour</string>
     <string name="nom">Nom</string>
     <string name="prenom">Prenom</string>
@@ -19,7 +19,7 @@
     <string name="litre100km"> litre/100km </string>
     <string name="emission">Soit une émission de:</string>
     <string name="g">g de CO2</string>
-    <string name="felicitation">"Félicitation votre consommation de carburant est de 0 ou vous faites le plus d\'ffort possible pour eviter de consmmation et la planète vous remercie "</string>
-    <string name="emissionRegion"> "L\' émission de cette région est de : </string>
-    <string name="rang"> "Le rang de de la région est de : </string>
+    <string name="felicitation">Félicitation votre consommation de carburant est de 0 ou vous faites le plus d\'ffort possible pour eviter de consmmation et la planète vous remercie</string>
+    <string name="emissionRegion"> L\' émission de cette région est de : </string>
+    <string name="rang">Le rang de de la région est de : </string>
 </resources>

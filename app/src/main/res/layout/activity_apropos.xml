@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
     <TextView
         android:id="@+id/valentin"
         android:layout_width="wrap_content"
@@ -15,10 +16,10 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.017"
+        app:layout_constraintHorizontal_bias="0.001"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.467" />
+        app:layout_constraintVertical_bias="0.854" />
 
     <TextView
         android:id="@+id/adrien"
@@ -29,25 +30,25 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.984"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.467" />
-
+        app:layout_constraintVertical_bias="0.854" />
 
     <TextView
         android:id="@+id/nous"
-        android:layout_width="361dp"
-        android:layout_height="179dp"
+        android:layout_width="296dp"
+        android:layout_height="220dp"
+        android:gravity="center"
         android:text="En tant qu'étudiant en informatique, nous nous sommes mis en quête de creer une application mobile pour sensibiliser
 la population quant à leur consomation de carburant et quel impact ca a sur notre magnifique planete"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.68"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.753" />
+        app:layout_constraintVertical_bias="0.097" />
 
     <Button
         android:id="@+id/retourpropos"
@@ -63,28 +64,28 @@ la population quant à leur consomation de carburant et quel impact ca a sur not
 
     <ImageView
         android:id="@+id/imageView6"
-        android:layout_width="226dp"
-        android:layout_height="159dp"
+        android:layout_width="202dp"
+        android:layout_height="254dp"
         android:rotation="90"
         app:layout_constraintBottom_toTopOf="@+id/adrien"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.99"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.77"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/adrien" />
 
     <ImageView
         android:id="@+id/imageView7"
-        android:layout_width="209dp"
-        android:layout_height="326dp"
+        android:layout_width="185dp"
+        android:layout_height="252dp"
         android:rotation="90"
         app:layout_constraintBottom_toTopOf="@+id/valentin"
         app:layout_constraintEnd_toEndOf="@+id/imageView6"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.029"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/valentin" />
 
 

@@ -1,20 +1,26 @@
 <resources>
     <string name="app_name">Androgreen Studwood</string>
-    <string name="apropos">A Propos</string>
-    <string name="qcm">QCM</string>
-    <string name="ville">Ville</string>
+    <string name="apropos">About us</string>
+    <string name="qcm">Multiple choice questionnaire</string>
+    <string name="ville">Region</string>
     <string name="home">Menu</string>
-    <string name="texte">Bienvenue sur l\'application qui permet d\'indiquer votre emission de poluttion</string>
-    <string name="retour">Retour</string>
-    <string name="nom">Nom</string>
-    <string name="prenom">Prenom</string>
-    <string name="transport">Transport en commun</string>
-    <string name="voiture">Voiture</string>
-    <string name="pied">Velo/Pied</string>
-    <string name="quelleTransport">Quelle transport utilisez-vous pour aller au travail ?</string>
-    <string name="consommation">Quelle est votre distance parcouru entre 2 points ?</string>
-    <string name="litre">Combien de litre de carburant à besoin votre voiture pour faire le plein ?</string>
-    <string name="valider">Valider</string>
-    <string name="consoSup">Votre consommation est de : </string>
+    <string name="texte">Welcome to the application that allows you to indicate your pollution emission</string>
+    <string name="retour">Back</string>
+    <string name="nom">Name</string>
+    <string name="prenom">First name</string>
+    <string name="transport">Public transport</string>
+    <string name="voiture">Car</string>
+    <string name="pied">Bike/Foot</string>
+    <string name="quelleTransport">What transport do you use to get to work?</string>
+    <string name="consommation">What is your distance between two points?</string>
+    <string name="litre">How many litres of fuel does your car need to fill up?</string>
+    <string name="valider">Validate</string>
+    <string name="consoSup">Your consumption is : </string>
+    <string name="litre100km"> litre/100km </string>
+    <string name="emission">That is an issue of:</string>
+    <string name="g">g of CO2</string>
+    <string name="felicitation">Congratulations, your fuel consumption is 0 or you do as much as possible to avoid consumption and the planet thanks you</string>
+    <string name="emissionRegion"> The emission of this region is : </string>
+    <string name="rang">The rank of the region is :</string>
 
 </resources>
