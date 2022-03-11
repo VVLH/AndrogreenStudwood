@@ -29,11 +29,7 @@ public class MainActivity extends AppCompatActivity {
         //DATABASE
         ClientDbHelper bdd= new ClientDbHelper(this);
         SQLiteDatabase db= bdd.getWritableDatabase();
-        ContentValues values =new ContentValues();
-        values.put("id",25);
-        values.put("nom","Paris");
 
-        db.insert("Ville",null, values);
 
 
         boutonQCM = (Button) findViewById(R.id.boutonQCM);

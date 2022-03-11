@@ -43,14 +43,18 @@ public class QCM extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(QCM.this, totalConso.class);
-                EditText conso = (EditText) findViewById(R.id.questionconso);
-                EditText  litre = (EditText) findViewById(R.id.litre);
-                EditText nom = (EditText) findViewById(R.id.nom);
-                int nombreLitre =Integer.parseInt(litre.getText().toString());
-                int nombreConso =Integer.parseInt(conso.getText().toString());
-                int resultat = (nombreLitre*100)/nombreConso;
-                intent.putExtra("conso", resultat);
-
+                if(findViewById(R.id.litrelayout).getVisibility()==View.VISIBLE) {
+                    EditText conso = (EditText) findViewById(R.id.questionconso);
+                    EditText litre = (EditText) findViewById(R.id.litre);
+                    EditText nom = (EditText) findViewById(R.id.nom);
+                    float nombreLitre = Float.valueOf(litre.getText().toString());
+                    float nombreConso = Float.valueOf(conso.getText().toString());
+                    float resultat = (nombreLitre * 100) / nombreConso;
+                    intent.putExtra("conso", resultat);
+                }
+                else{
+                    intent.putExtra("conso",0);
+                }
                 startActivity(intent);
 
             }

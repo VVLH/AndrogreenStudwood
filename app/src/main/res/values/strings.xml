@@ -12,9 +12,12 @@
     <string name="voiture">Voiture</string>
     <string name="pied">Velo/Pied</string>
     <string name="quelleTransport">Quelle transport utilisez-vous pour aller au travail ?</string>
-    <string name="consommation">Quelle est votre distance parcouru entre 2 points ?</string>
+    <string name="consommation">Quelle est votre distance parcouru entre 2 pleins ?</string>
     <string name="litre">Combien de litre de carburant à besoin votre voiture pour faire le plein ?</string>
     <string name="valider">Valider</string>
-    <string name="consoSup">Votre consommation est de : </string>
-
+    <string name="consoSup">Votre consommation de carburant est de : </string>
+    <string name="litre100km"> litre/100km </string>
+    <string name="emission">Soit une émission de:</string>
+    <string name="g">g de CO2</string>
+    <string name="felicitation">"Félicitation votre consommation de carburant est de 0 ou vous faites le plus d\'ffort possible pour eviter de consmmation et la planète vous remercie "</string>
 </resources>
