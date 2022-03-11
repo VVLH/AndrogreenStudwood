@@ -20,6 +20,8 @@ public class MainActivity extends AppCompatActivity {
     private Button boutonQCM;
     private Button boutonVille;
     private Button boutonApropos;
+    private ClientDbHelper bdd;
+    private SQLiteDatabase db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,8 +29,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //DATABASE
-        ClientDbHelper bdd= new ClientDbHelper(this);
-        SQLiteDatabase db= bdd.getWritableDatabase();
+         bdd= new ClientDbHelper(this);
+         db= bdd.getWritableDatabase();
 
 
 
@@ -95,5 +97,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        db.close();
+    }
 }

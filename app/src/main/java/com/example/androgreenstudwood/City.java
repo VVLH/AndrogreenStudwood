@@ -22,11 +22,11 @@ import android.widget.Toast;
 
 public class City extends AppCompatActivity {
 
-    ListView lvVille;
-    String[] villes = {"Centre-Val de Loire", "Grand Est", "Pays de la Loire", "Bourgogne-Franche-Comté", "Bretagne",
+    private ListView lvVille;
+    private String[] villes = {"Centre-Val de Loire", "Grand Est", "Pays de la Loire", "Bourgogne-Franche-Comté", "Bretagne",
                     "Auvergne-Rhône-Alpes", "Hauts-de-France", "Occitanie", "Nouvelle-Aquitaine", "Île-de-France",
                     "Normandie", "Corse", "Provence-Alpes-Côte d Azur"};
-    int[] villeImages = {R.drawable.ville, R.drawable.ville, R.drawable.ville, R.drawable.ville, R.drawable.ville,
+    private int[] villeImages = {R.drawable.ville, R.drawable.ville, R.drawable.ville, R.drawable.ville, R.drawable.ville,
                         R.drawable.villemoyenne, R.drawable.villemoyenne, R.drawable.villemoyenne, R.drawable.villemoyenne, R.drawable.villemoyenne,
                         R.drawable.petiteville, R.drawable.petiteville, R.drawable.petiteville, R.drawable.petiteville, R.drawable.petiteville,
                         R.drawable.villeverte, R.drawable.villeverte, R.drawable.villeverte, R.drawable.villeverte, R.drawable.villeverte};
@@ -46,9 +46,10 @@ public class City extends AppCompatActivity {
         lvVille.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-            Intent intent = new Intent(City.this, Villes.class);
-            intent.putExtra(City.MSG, villes[position]);
-            startActivity(intent);
+                String s =(String)parent.getItemAtPosition(position);
+                Intent intent = new Intent(City.this, Villes.class);
+                intent.putExtra("region",villes[position]);
+                startActivity(intent);
             }
         });
 
