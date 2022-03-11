@@ -19,7 +19,10 @@
     <string name="litre100km"> litre/100km </string>
     <string name="emission">Soit une émission de:</string>
     <string name="g">g de CO2</string>
-    <string name="felicitation">Félicitation votre consommation de carburant est de 0 ou vous faites le plus d\'ffort possible pour eviter de consmmation et la planète vous remercie</string>
+    <string name="felicitation">Félicitation votre consommation de carburant est de 0 ou vous faites le plus d\'effort possible pour eviter de consmmation et la planète vous remercie</string>
     <string name="emissionRegion"> L\' émission de cette région est de : </string>
     <string name="rang">Le rang de de la région est de : </string>
+    <string name="laprois_valentin">LAPROIS Valentin</string>
+    <string name="delmote_adrien">DELMOTE Adrien</string>
+    <string name="Text_A_Propos">En tant qu\'étudiant en informatique, nous nous sommes mis en quête de creer une application mobile pour sensibiliser la population quant à leur consomation de carburant et quel impact ca a sur notre magnifique planete</string>
 </resources>

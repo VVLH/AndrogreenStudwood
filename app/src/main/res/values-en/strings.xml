@@ -22,5 +22,9 @@
     <string name="felicitation">Congratulations, your fuel consumption is 0 or you do as much as possible to avoid consumption and the planet thanks you</string>
     <string name="emissionRegion"> The emission of this region is : </string>
     <string name="rang">The rank of the region is :</string>
+    <string name="laprois_valentin">LAPROIS Valentin</string>
+    <string name="delmote_adrien">DELMOTE Adrien</string>
+    <string name="Text_A_Propos">As a computer science student, we set out to create a mobile application to raise awareness about fuel consumption and the impact it has on our beautiful planet</string>
+
 
 </resources>
