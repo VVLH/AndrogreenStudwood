@@ -1,10 +1,16 @@
 package com.example.androgreenstudwood;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.ContentValues;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.res.Configuration;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
@@ -17,6 +23,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.util.Locale;
+
 public class MainActivity extends AppCompatActivity {
     private Button boutonQCM;
     private Button boutonVille;
@@ -28,11 +36,24 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        loadLocale();
         setContentView(R.layout.activity_main);
+
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle(getResources().getString(R.string.app_name));
 
         //DATABASE
          bdd= new ClientDbHelper(this);
          db= bdd.getWritableDatabase();
+
+        Button Langue = findViewById(R.id.Langue);
+        Langue.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showChangeLanguageDialog();
+            }
+        });
+
 
 
 
@@ -103,5 +124,52 @@ public class MainActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         db.close();
+    }
+
+
+
+
+
+
+    private void showChangeLanguageDialog(){
+        //liste des différentes langues disponibles pour l'application
+        final String[] listItems = {"Francais","English"};
+        AlertDialog.Builder mBuilder = new AlertDialog.Builder((MainActivity.this));
+        mBuilder.setTitle("Choississez votre langage");
+        mBuilder.setSingleChoiceItems(listItems, -1, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                if (i == 0){
+                    setLocal("en");
+                    recreate();
+                }
+
+                dialogInterface.dismiss();
+
+            }
+        });
+
+        AlertDialog mDialog = mBuilder.create();
+        mDialog.show();
+    }
+
+    private void setLocal(String langue) {
+        Locale locale = new Locale(langue);
+        Locale.setDefault(locale);
+        Configuration config = new Configuration();
+        config.locale = locale;
+        getBaseContext().getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
+        //sauvegarder toute les données
+        SharedPreferences.Editor editor = getSharedPreferences("Setting", MODE_PRIVATE).edit();
+        editor.putString("Ma langue", langue);
+        editor.apply();
+    }
+
+    public void loadLocale(){
+        SharedPreferences prefs = getSharedPreferences("Paramètre", Activity.MODE_PRIVATE);
+        String language = prefs.getString("My_Lang", "");
+        setLocal(language);
+
+
     }
 }
