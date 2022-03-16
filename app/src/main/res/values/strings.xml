@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Androgreen Studwood</string>
     <string name="apropos">A Propos</string>
+    <string name="qcm">QCM</string>
     <string name="ville">Region</string>
     <string name="home">Menu</string>
     <string name="texte">Bienvenue sur l\'application qui permet d\'indiquer votre emission de polution</string>
@@ -24,8 +25,5 @@
     <string name="laprois_valentin">LAPROIS Valentin</string>
     <string name="delmote_adrien">DELMOTE Adrien</string>
     <string name="Text_A_Propos">En tant qu\'étudiant en informatique, nous nous sommes mis en quête de creer une application mobile pour sensibiliser la population quant à leur consomation de carburant et quel impact ca a sur notre magnifique planete</string>
-    <string name="villes">Villes</string>
-    <string name="qcm">QCM</string>
-    <string name="langue">Langue</string>
-    <string name="a_propos">A Propos</string>
+    <string name="enCO">En co2</string>
 </resources>

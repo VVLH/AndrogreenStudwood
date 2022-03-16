@@ -6,21 +6,17 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
-import android.content.ContentValues;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.database.sqlite.SQLiteDatabase;
-import android.graphics.Bitmap;
-import android.graphics.Canvas;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.Toast;
 
 import java.util.Locale;
@@ -44,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
         //DATABASE
          bdd= new ClientDbHelper(this);
          db= bdd.getWritableDatabase();
+         bdd.onDowngrade(db,2,3);
 
         Button Langue = findViewById(R.id.Langue);
         Langue.setOnClickListener(new View.OnClickListener() {
@@ -72,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
         boutonVille.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, City.class);
+                Intent intent = new Intent(MainActivity.this, Region.class);
                 startActivity(intent);
             }
         });
@@ -102,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(this, "Vous etes déja sur le menu", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.ville:
-                intent = new Intent(MainActivity.this, City.class);
+                intent = new Intent(MainActivity.this, Region.class);
                 startActivity(intent);
                 break;
             case R.id.qcm:

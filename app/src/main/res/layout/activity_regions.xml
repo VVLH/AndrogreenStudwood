@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Villes">
+    tools:context=".Rregions">
 
     <TextView
         android:id="@+id/region"
@@ -22,24 +22,29 @@
 
     <TextView
         android:id="@+id/emissionRegion"
-        android:layout_width="413dp"
-        android:layout_height="24dp"
+        android:layout_width="438dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="55dp"
         android:gravity="center"
         android:text="TextView"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/region" />
+        app:layout_constraintTop_toBottomOf="@+id/region"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/rang"
-        android:layout_width="411dp"
-        android:layout_height="31dp"
+        android:layout_width="429dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="55dp"
         android:gravity="center"
         android:text="TextView"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.65999997" />
+        app:layout_constraintTop_toBottomOf="@+id/emissionRegion"
+        app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,24 +3,17 @@ package com.example.androgreenstudwood;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.Toast;
 
-public class City extends AppCompatActivity {
+public class Region extends AppCompatActivity {
 
     private ListView lvVille;
     private String[] villes = {"Centre-Val de Loire", "Grand Est", "Pays de la Loire", "Bourgogne-Franche-Comté", "Bretagne",
@@ -37,17 +30,17 @@ public class City extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_city);
+        setContentView(R.layout.activity_region);
 
         lvVille = (ListView) findViewById(R.id.listview);
-        VilleAdapter villeAdapter = new VilleAdapter(getApplicationContext(), villes, villeImages);
+        RegionAdapter villeAdapter = new RegionAdapter(getApplicationContext(), villes, villeImages);
         lvVille.setAdapter(villeAdapter);
 
         lvVille.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String s =(String)parent.getItemAtPosition(position);
-                Intent intent = new Intent(City.this, Villes.class);
+                Intent intent = new Intent(Region.this, Rregions.class);
                 intent.putExtra("region",villes[position]);
                 startActivity(intent);
             }
@@ -67,7 +60,7 @@ public class City extends AppCompatActivity {
         Intent intent;
         switch (item.getItemId()) {
             case R.id.home:
-                intent = new Intent(City.this, MainActivity.class);
+                intent = new Intent(Region.this, MainActivity.class);
                 startActivity(intent);
                 break;
             case R.id.ville:
@@ -75,11 +68,11 @@ public class City extends AppCompatActivity {
 
                 break;
             case R.id.qcm:
-                intent = new Intent(City.this, QCM.class);
+                intent = new Intent(Region.this, QCM.class);
                 startActivity(intent);
                 break;
             case R.id.apropos:
-                intent = new Intent(City.this, A_Propos.class);
+                intent = new Intent(Region.this, A_Propos.class);
                 startActivity(intent);
                 break;
             default:

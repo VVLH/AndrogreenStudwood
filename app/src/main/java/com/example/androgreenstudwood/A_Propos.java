@@ -42,7 +42,7 @@ public class A_Propos extends AppCompatActivity {
                 startActivity(intent);
                 break;
             case R.id.ville:
-                intent = new Intent(A_Propos.this, City.class);
+                intent = new Intent(A_Propos.this, Region.class);
                 startActivity(intent);
                 break;
             case R.id.qcm:

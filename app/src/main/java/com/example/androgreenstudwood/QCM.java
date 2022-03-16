@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Parcelable;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -17,12 +16,7 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
-
-import org.w3c.dom.Text;
-
-import java.io.Serializable;
 
 public class QCM extends AppCompatActivity {
     Button bouton;
@@ -42,7 +36,7 @@ public class QCM extends AppCompatActivity {
         boutonV.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(QCM.this, totalConso.class);
+                Intent intent = new Intent(QCM.this, TotalConso.class);
                 if(findViewById(R.id.litrelayout).getVisibility()==View.VISIBLE) {
                     EditText conso = (EditText) findViewById(R.id.questionconso);
                     EditText litre = (EditText) findViewById(R.id.litre);
@@ -111,7 +105,7 @@ public class QCM extends AppCompatActivity {
                 startActivity(intent);
                 break;
             case R.id.ville:
-                intent = new Intent(QCM.this, City.class);
+                intent = new Intent(QCM.this, Region.class);
                 startActivity(intent);
                 break;
             case R.id.qcm:

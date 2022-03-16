@@ -11,9 +11,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
-public class totalConso extends AppCompatActivity {
+public class TotalConso extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,19 +59,19 @@ public class totalConso extends AppCompatActivity {
         Intent intent;
         switch (item.getItemId()) {
             case R.id.home:
-                intent = new Intent(totalConso.this, MainActivity.class);
+                intent = new Intent(TotalConso.this, MainActivity.class);
                 startActivity(intent);
                 break;
             case R.id.ville:
-                intent = new Intent(totalConso.this, City.class);
+                intent = new Intent(TotalConso.this, Region.class);
                 startActivity(intent);
                 break;
             case R.id.qcm:
-                intent = new Intent(totalConso.this, QCM.class);
+                intent = new Intent(TotalConso.this, QCM.class);
                 startActivity(intent);
                 break;
             case R.id.apropos:
-                intent = new Intent(totalConso.this, A_Propos.class);
+                intent = new Intent(TotalConso.this, A_Propos.class);
                 startActivity(intent);
                 break;
             default:

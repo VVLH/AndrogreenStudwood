@@ -7,14 +7,14 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.widget.TextView;
 
-public class Villes extends AppCompatActivity {
+public class Rregions extends AppCompatActivity {
     private ClientDbHelper bdd;
     private SQLiteDatabase db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_villes);
+        setContentView(R.layout.activity_regions);
        TextView nom= (TextView) findViewById(R.id.region);
        TextView emission= (TextView) findViewById(R.id.emissionRegion);
         TextView rang= (TextView) findViewById(R.id.rang);
@@ -24,13 +24,13 @@ public class Villes extends AppCompatActivity {
         String[] col2= {"id","nom","emission"};
         String[] select= {region};
         Cursor curs= db.query("Ville",col2, "nom=?", select, null,null,"id ASC");
-        if (curs.moveToFirst()){
-                Integer villeId = curs.getInt(curs.getColumnIndexOrThrow("id"));
-                String villeNom = curs.getString(curs.getColumnIndexOrThrow("nom"));
-                Float villeEmission = curs.getFloat(curs.getColumnIndexOrThrow("emission"));
-                nom.setText(villeNom);
-                emission.setText(R.string.emissionRegion+String.valueOf(villeEmission));
-                rang.setText(R.string.rang+String.valueOf(villeId));
+            if (curs.moveToFirst()){
+                Integer regionId = curs.getInt(curs.getColumnIndexOrThrow("id"));
+                String regionNom = curs.getString(curs.getColumnIndexOrThrow("nom"));
+                Float regionEmission = curs.getFloat(curs.getColumnIndexOrThrow("emission"));
+                nom.setText(regionNom);
+                emission.setText(getString(R.string.emissionRegion)+" "+ String.valueOf(regionEmission) +" "+ getString(R.string.enCO));
+                rang.setText((getString(R.string.rang))+" "+ String.valueOf(regionId));
         }
 
     }

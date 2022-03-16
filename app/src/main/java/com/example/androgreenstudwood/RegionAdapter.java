@@ -13,7 +13,7 @@ import android.widget.Toast;
 
 
 
-public class VilleAdapter extends BaseAdapter {
+public class RegionAdapter extends BaseAdapter {
 
     Context context;
     String listvilles[];
@@ -21,7 +21,7 @@ public class VilleAdapter extends BaseAdapter {
     LayoutInflater inflater;
 
 
-    public VilleAdapter(Context context, String [] listville, int [] images){
+    public RegionAdapter(Context context, String [] listville, int [] images){
 
         this.context = context;
         this.listvilles = listville;

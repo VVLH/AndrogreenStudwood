@@ -10,13 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndrogreenStudwood" >
         <activity
-            android:name=".Villes"
+            android:name=".Rregions"
             android:exported="true" />
         <activity
-            android:name=".totalConso"
+            android:name=".TotalConso"
             android:exported="true" />
         <activity
-            android:name=".City"
+            android:name=".Region"
             android:exported="true" />
         <activity
             android:name=".A_Propos"
