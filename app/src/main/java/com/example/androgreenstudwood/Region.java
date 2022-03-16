@@ -10,6 +10,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -27,10 +28,20 @@ public class Region extends AppCompatActivity {
     public static final String MSG = "";
 
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_region);
+
+        Button bouton = (Button) findViewById(R.id.retourCity);
+        bouton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
 
         lvVille = (ListView) findViewById(R.id.listview);
         RegionAdapter villeAdapter = new RegionAdapter(getApplicationContext(), villes, villeImages);
@@ -47,7 +58,6 @@ public class Region extends AppCompatActivity {
         });
 
     }
-
 
 
     @Override
