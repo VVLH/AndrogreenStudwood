@@ -39,8 +39,7 @@ public class MainActivity extends AppCompatActivity {
         loadLocale();
         setContentView(R.layout.activity_main);
 
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.setTitle(getResources().getString(R.string.app_name));
+
 
         //DATABASE
          bdd= new ClientDbHelper(this);
@@ -50,9 +49,11 @@ public class MainActivity extends AppCompatActivity {
         Langue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                showChangeLanguageDialog();
+                changerdelangue();
             }
         });
+
+
 
 
 
@@ -127,25 +128,23 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    private void changerdelangue() {
+        final String[] listItems = {"Français", "English"};
 
-
-
-
-    private void showChangeLanguageDialog(){
-        //liste des différentes langues disponibles pour l'application
-        final String[] listItems = {"Francais","English"};
-        AlertDialog.Builder mBuilder = new AlertDialog.Builder((MainActivity.this));
-        mBuilder.setTitle("Choississez votre langage");
+        AlertDialog.Builder mBuilder = new AlertDialog.Builder(MainActivity.this);
+        mBuilder.setTitle("Choisissez une langue : ");
         mBuilder.setSingleChoiceItems(listItems, -1, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                if (i == 0){
-                    setLocal("en");
+                if (i == 0) {
+                    setLocale("fr");
+                    recreate();
+                } else if (i == 1) {
+                    setLocale("en");
                     recreate();
                 }
 
                 dialogInterface.dismiss();
-
             }
         });
 
@@ -153,23 +152,23 @@ public class MainActivity extends AppCompatActivity {
         mDialog.show();
     }
 
-    private void setLocal(String langue) {
-        Locale locale = new Locale(langue);
+
+    private void setLocale(String lang) {
+        Locale locale = new Locale(lang);
         Locale.setDefault(locale);
         Configuration config = new Configuration();
         config.locale = locale;
         getBaseContext().getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
-        //sauvegarder toute les données
-        SharedPreferences.Editor editor = getSharedPreferences("Setting", MODE_PRIVATE).edit();
-        editor.putString("Ma langue", langue);
+
+        SharedPreferences.Editor editor = getSharedPreferences("Paramètres", MODE_PRIVATE).edit();
+        editor.putString("My_Lang", lang);
         editor.apply();
     }
 
-    public void loadLocale(){
-        SharedPreferences prefs = getSharedPreferences("Paramètre", Activity.MODE_PRIVATE);
+    public void loadLocale() {
+        SharedPreferences prefs = getSharedPreferences("Paramètres", Activity.MODE_PRIVATE);
         String language = prefs.getString("My_Lang", "");
-        setLocal(language);
-
-
+        setLocale(language);
     }
+
 }
