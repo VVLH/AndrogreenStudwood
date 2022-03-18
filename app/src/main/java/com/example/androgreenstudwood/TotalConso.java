@@ -25,14 +25,14 @@ public class TotalConso extends AppCompatActivity {
             TextView texteConso = (TextView) findViewById(R.id.votreconso);
             TextView texteEmission = (TextView) findViewById(R.id.emission);
             TextView resultatEmission = (TextView) findViewById(R.id.resultatemission);
-            texteConso.setText(R.string.consoSup);
-            resultatConso.setText(conso + R.string.litre100km);
-            texteEmission.setText(R.string.emission);
+            texteConso.setText(getString(R.string.consoSup));
+            resultatConso.setText(conso + getString(R.string.litre100km));
+            texteEmission.setText(getString(R.string.emission));
             float calculeEmission = (float) ((6.49 * 352) * Float.valueOf(conso));
-            resultatEmission.setText(String.valueOf(calculeEmission) + R.string.g);
+            resultatEmission.setText(String.valueOf(calculeEmission) + getString(R.string.g));
         }else {
             TextView resultatConso = (TextView) findViewById(R.id.resultat);
-            resultatConso.setText(R.string.felicitation);
+            resultatConso.setText(getString(R.string.felicitation));
 
         }
         Button boutonretour = (Button) findViewById(R.id.retourtotal);
