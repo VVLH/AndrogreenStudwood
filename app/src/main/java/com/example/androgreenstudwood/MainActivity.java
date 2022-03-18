@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         //DATABASE
          bdd= new ClientDbHelper(this);
          db= bdd.getWritableDatabase();
-         bdd.onDowngrade(db,2,3);
+
 
         Button Langue = findViewById(R.id.Langue);
         Langue.setOnClickListener(new View.OnClickListener() {

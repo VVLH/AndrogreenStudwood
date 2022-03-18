@@ -3,7 +3,9 @@ package com.example.androgreenstudwood;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.ContentValues;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -20,6 +22,15 @@ import com.google.android.material.textfield.TextInputLayout;
 
 public class QCM extends AppCompatActivity {
     Button bouton;
+    Button enregistrement;
+    EditText nom;
+    EditText prenom;
+    EditText litre;
+    EditText conso;
+    RadioGroup choix;
+    private ClientDbHelper bdd;
+    private SQLiteDatabase db;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +42,7 @@ public class QCM extends AppCompatActivity {
                 finish();
             }
         });
+
 
         Button boutonV = (Button) findViewById(R.id.valider);
         boutonV.setOnClickListener(new View.OnClickListener() {
@@ -51,6 +63,75 @@ public class QCM extends AppCompatActivity {
                 }
                 startActivity(intent);
 
+            }
+        });
+        bdd= new ClientDbHelper(this);
+        db= bdd.getWritableDatabase();
+
+        nom= (EditText) findViewById(R.id.nom);
+        prenom= (EditText) findViewById(R.id.prenom);
+        litre= (EditText) findViewById(R.id.litre);
+        conso= (EditText) findViewById(R.id.questionconso);
+        choix= (RadioGroup) findViewById(R.id.groupe);
+
+        enregistrement= (Button)  findViewById(R.id.enregistrer);
+        enregistrement.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String s_nom="";
+                String s_prenom="";
+                float s_litre=0;
+                float s_conso=0;
+                String s_choix="";
+                
+                boolean info= true;
+                
+                if(nom.getText().toString().trim().equals("")== false){
+                    s_nom= nom.getText().toString().trim();
+                }else{
+                    info=false;
+                }
+                if(prenom.getText().toString().trim().equals("")== false){
+                    s_prenom= prenom.getText().toString().trim();
+                }else{
+                    info=false;
+                }
+                if(litre.getText().toString().trim().equals("")== false){
+                    s_litre= Float.valueOf(litre.getText().toString().trim());
+                }else{
+                    s_litre=0;
+                }
+                if(conso.getText().toString().trim().equals("")== false){
+                    s_conso= Float.valueOf(conso.getText().toString().trim());
+                }else{
+                    s_conso =0;
+                }
+
+
+                int select = choix.getCheckedRadioButtonId();
+
+                if (select !=-1){
+                    RadioButton radiochoix;
+                    radiochoix= (RadioButton) findViewById(select);
+                    s_choix= radiochoix.getText().toString();
+                }else{
+                    info=false;
+                }
+
+                if (info==false){
+                    Toast.makeText(getApplicationContext(),getString(R.string.manque),Toast.LENGTH_SHORT ).show();
+                }else{
+                    ContentValues values= new ContentValues();
+                    Toast.makeText(getApplicationContext(),getString(R.string.ok),Toast.LENGTH_SHORT ).show();
+                    values.put("nom",s_nom);
+                    values.put("prenom",s_prenom);
+                    values.put("transport",s_choix);
+                    values.put("litre",s_litre);
+                    values.put("distance",s_conso);
+                    db.insert("Personne",null,values);
+
+
+                }
             }
         });
 
