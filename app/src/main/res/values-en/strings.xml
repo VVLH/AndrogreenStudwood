@@ -28,4 +28,6 @@
     <string name="enCO">in co2</string>
     <string name="manque"> missing information</string>
     <string name="ok"> ok </string>
+    <string name="langue">Language</string>
+    <string name="enregistrer">register</string>
 </resources>
