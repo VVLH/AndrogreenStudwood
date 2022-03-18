@@ -29,5 +29,9 @@
     <string name="manque"> il manque des informations</string>
     <string name="ok"> ok </string>
     <string name="langue">Langue</string>
+    <string name="choisirlangue">Choisissez une langue :</string>
+    <string name="Dejasurregion">Vous êtes deja sur la page "Region"</string>
+    <string name="Dejasurapropos">Vous êtes deja sur la page "A propos"</string>
+    <string name="Dejasurmenu">Vous êtes deja sur la page "Menu"</string>
     <string name="enregistrer">Enregistrer</string>
 </resources>

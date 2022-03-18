@@ -50,7 +50,7 @@ public class A_Propos extends AppCompatActivity {
                 startActivity(intent);
                 break;
             case R.id.apropos:
-                Toast.makeText(this, "Vous etes déja sur a propos", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, getString(R.string.Dejasurapropos), Toast.LENGTH_SHORT).show();
                 break;
             default:
                 return super.onOptionsItemSelected(item);

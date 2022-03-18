@@ -74,7 +74,7 @@ public class Region extends AppCompatActivity {
                 startActivity(intent);
                 break;
             case R.id.ville:
-                Toast.makeText(this, "Vous etes déja sur les villes", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, getString(R.string.Dejasurregion), Toast.LENGTH_SHORT).show();
 
                 break;
             case R.id.qcm:

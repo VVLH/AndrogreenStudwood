@@ -96,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
         Intent intent;
         switch (item.getItemId()) {
             case R.id.home:
-                Toast.makeText(this, "Vous etes déja sur le menu", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, getString(R.string.Dejasurmenu), Toast.LENGTH_SHORT).show();
                 break;
             case R.id.ville:
                 intent = new Intent(MainActivity.this, Region.class);
@@ -129,7 +129,7 @@ public class MainActivity extends AppCompatActivity {
         final String[] listItems = {"Français", "English"};
 
         AlertDialog.Builder mBuilder = new AlertDialog.Builder(MainActivity.this);
-        mBuilder.setTitle("Choisissez une langue : ");
+        mBuilder.setTitle(getString(R.string.choisirlangue));
         mBuilder.setSingleChoiceItems(listItems, -1, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
