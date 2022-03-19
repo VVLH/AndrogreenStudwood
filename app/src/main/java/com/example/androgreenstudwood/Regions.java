@@ -76,9 +76,6 @@ public class Regions extends AppCompatActivity {
                 intent = new Intent(Regions.this, A_Propos.class);
                 startActivity(intent);
                 break;
-            case R.id.quitter:
-                System.exit(0);
-                break;
             default:
                 return super.onOptionsItemSelected(item);
         }
