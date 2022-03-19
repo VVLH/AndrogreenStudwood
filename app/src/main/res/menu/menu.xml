@@ -10,7 +10,7 @@
         app:showAsAction="always" />
     <item
         android:id="@+id/ville"
-        android:title="@string/ville" />
+        android:title="@string/Region" />
     <item
         android:id="@+id/qcm"
         android:title="@string/qcm" />

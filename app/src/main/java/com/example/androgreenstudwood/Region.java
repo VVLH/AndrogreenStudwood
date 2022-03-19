@@ -51,7 +51,7 @@ public class Region extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String s =(String)parent.getItemAtPosition(position);
-                Intent intent = new Intent(Region.this, Rregions.class);
+                Intent intent = new Intent(Region.this, Regions.class);
                 intent.putExtra("region",villes[position]);
                 startActivity(intent);
             }

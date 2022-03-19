@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndrogreenStudwood" >
         <activity
-            android:name=".Rregions"
+            android:name=".Regions"
             android:exported="true" />
         <activity
             android:name=".TotalConso"

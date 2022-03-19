@@ -5,9 +5,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
-public class Rregions extends AppCompatActivity {
+public class Regions extends AppCompatActivity {
     private ClientDbHelper bdd;
     private SQLiteDatabase db;
 
@@ -33,10 +35,19 @@ public class Rregions extends AppCompatActivity {
                 rang.setText((getString(R.string.rang))+" "+ String.valueOf(regionId));
         }
 
+        Button bouton = (Button) findViewById(R.id.retour);
+        bouton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
+
     }
     @Override
     protected void onDestroy() {
         super.onDestroy();
         db.close();
     }
+
 }
