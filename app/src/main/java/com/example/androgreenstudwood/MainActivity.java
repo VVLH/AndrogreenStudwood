@@ -111,7 +111,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
                 break;
             case R.id.quitter:
-                System.exit(0);
+                this.onDestroy();
                 break;
             default:
                 return super.onOptionsItemSelected(item);

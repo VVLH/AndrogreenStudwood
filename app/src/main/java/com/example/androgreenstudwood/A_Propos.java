@@ -53,11 +53,16 @@ public class A_Propos extends AppCompatActivity {
                 Toast.makeText(this, getString(R.string.Dejasurapropos), Toast.LENGTH_SHORT).show();
                 break;
             case R.id.quitter:
-                System.exit(0);
+                this.onDestroy();
                 break;
             default:
                 return super.onOptionsItemSelected(item);
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
     }
 }
