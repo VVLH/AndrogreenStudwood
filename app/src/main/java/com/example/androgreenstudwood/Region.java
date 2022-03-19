@@ -16,11 +16,11 @@ import android.widget.Toast;
 
 public class Region extends AppCompatActivity {
 
-    private ListView lvVille;
-    private String[] villes = {"Centre-Val de Loire", "Grand Est", "Pays de la Loire", "Bourgogne-Franche-Comté", "Bretagne",
+    private ListView lvRegions;
+    private String[] Region = {"Centre-Val de Loire", "Grand Est", "Pays de la Loire", "Bourgogne-Franche-Comté", "Bretagne",
                     "Auvergne-Rhône-Alpes", "Hauts-de-France", "Occitanie", "Nouvelle-Aquitaine", "Île-de-France",
                     "Normandie", "Corse", "Provence-Alpes-Côte d Azur"};
-    private int[] villeImages = {R.drawable.ville, R.drawable.ville, R.drawable.ville, R.drawable.ville, R.drawable.ville,
+    private int[] regionImages = {R.drawable.ville, R.drawable.ville, R.drawable.ville, R.drawable.ville, R.drawable.ville,
                         R.drawable.villemoyenne, R.drawable.villemoyenne, R.drawable.villemoyenne, R.drawable.villemoyenne, R.drawable.villemoyenne,
                         R.drawable.petiteville, R.drawable.petiteville, R.drawable.petiteville, R.drawable.petiteville, R.drawable.petiteville,
                         R.drawable.villeverte, R.drawable.villeverte, R.drawable.villeverte, R.drawable.villeverte, R.drawable.villeverte};
@@ -42,17 +42,20 @@ public class Region extends AppCompatActivity {
                 finish();
             }
         });
+        // creation de la liste des differentes regions
+        lvRegions = (ListView) findViewById(R.id.listview);
+        //creation d'un adapteur entre les régions et les images
+        RegionAdapter villeAdapter = new RegionAdapter(getApplicationContext(), Region, regionImages);
+        // application de l'adapteur sur la list des regions
+        lvRegions.setAdapter(villeAdapter);
 
-        lvVille = (ListView) findViewById(R.id.listview);
-        RegionAdapter villeAdapter = new RegionAdapter(getApplicationContext(), villes, villeImages);
-        lvVille.setAdapter(villeAdapter);
-
-        lvVille.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        //creation d'un setOnItemClickListener pour realiser une action des que l'on clique sur un element de la liste
+        lvRegions.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String s =(String)parent.getItemAtPosition(position);
                 Intent intent = new Intent(Region.this, Regions.class);
-                intent.putExtra("region",villes[position]);
+                intent.putExtra("region",Region[position]);
                 startActivity(intent);
             }
         });

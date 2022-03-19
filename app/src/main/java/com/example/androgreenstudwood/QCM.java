@@ -190,7 +190,7 @@ public class QCM extends AppCompatActivity {
                 startActivity(intent);
                 break;
             case R.id.qcm:
-                Toast.makeText(this, "Vous etes déja sur le questionnaire", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, getString(R.string.DejasurQCM), Toast.LENGTH_SHORT).show();
                 break;
             case R.id.apropos:
                 intent = new Intent(QCM.this, A_Propos.class);

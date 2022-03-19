@@ -35,4 +35,5 @@
     <string name="Dejasurmenu">Vous êtes deja sur la page "Menu"</string>
     <string name="enregistrer">Enregistrer</string>
     <string name="voici_la_liste_des_r_gions">voici la liste des régions</string>
+    <string name="DejasurQCM">Vous etes déja sur le questionnaire</string>
 </resources>

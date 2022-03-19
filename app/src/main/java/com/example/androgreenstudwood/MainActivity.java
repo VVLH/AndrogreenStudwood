@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     private Button boutonQCM;
     private Button boutonVille;
     private Button boutonApropos;
+    private Button Langue;
     private ClientDbHelper bdd;
     private SQLiteDatabase db;
 
@@ -42,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
          db= bdd.getWritableDatabase();
 
 
-        Button Langue = findViewById(R.id.Langue);
+        Langue = (Button)findViewById(R.id.Langue);
         Langue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
