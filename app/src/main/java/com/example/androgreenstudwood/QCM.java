@@ -196,9 +196,18 @@ public class QCM extends AppCompatActivity {
                 intent = new Intent(QCM.this, A_Propos.class);
                 startActivity(intent);
                 break;
+            case R.id.quitter:
+                System.exit(0);
+                break;
             default:
                 return super.onOptionsItemSelected(item);
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        db.close();
     }
 }

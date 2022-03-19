@@ -52,6 +52,9 @@ public class A_Propos extends AppCompatActivity {
             case R.id.apropos:
                 Toast.makeText(this, getString(R.string.Dejasurapropos), Toast.LENGTH_SHORT).show();
                 break;
+            case R.id.quitter:
+                System.exit(0);
+                break;
             default:
                 return super.onOptionsItemSelected(item);
         }

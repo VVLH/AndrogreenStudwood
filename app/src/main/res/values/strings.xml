@@ -25,7 +25,7 @@
     <string name="laprois_valentin">LAPROIS Valentin</string>
     <string name="delmote_adrien">DELMOTE Adrien</string>
     <string name="Text_A_Propos">En tant qu\'étudiant en informatique, nous nous sommes mis en quête de creer une application mobile pour sensibiliser la population quant à leur consomation de carburant et quel impact ca a sur notre magnifique planete</string>
-    <string name="enCO">En co2 par habitant</string>
+    <string name="enCO">En co2</string>
     <string name="manque"> il manque des informations</string>
     <string name="ok"> ok </string>
     <string name="langue">Langue</string>
@@ -34,5 +34,4 @@
     <string name="Dejasurapropos">Vous êtes deja sur la page "A propos"</string>
     <string name="Dejasurmenu">Vous êtes deja sur la page "Menu"</string>
     <string name="enregistrer">Enregistrer</string>
-    <string name="voici_la_liste_des_r_gions">Voici la liste des régions</string>
 </resources>

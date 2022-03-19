@@ -110,6 +110,9 @@ public class MainActivity extends AppCompatActivity {
                 intent = new Intent(MainActivity.this, A_Propos.class);
                 startActivity(intent);
                 break;
+            case R.id.quitter:
+                System.exit(0);
+                break;
             default:
                 return super.onOptionsItemSelected(item);
         }
